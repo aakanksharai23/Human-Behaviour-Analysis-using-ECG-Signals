@@ -1,52 +1,59 @@
-Human Behaviour Data Analysis
-Overview
-This project provides a workflow for analyzing human activity data using machine learning methods. It downloads a public mobile health dataset from Kaggle, preprocesses the data, balances it, and performs exploratory data analysis in preparation for modeling. The script is compatible with Jupyter or Colab environments and utilizes popular Python data science and deep learning libraries.
-Features
-•	Downloads the mobile-health dataset from Kaggle using kagglehub
-•	Loads and displays the dataset
-•	Downsamples the majority class for better balance in activity classification
-•	Explores feature ranges for outlier analysis
-•	Prepared for deep learning modeling with TensorFlow and Keras (setup shown)
-Requirements
-•	Python 3.6 or newer
-•	Colab or Jupyter environment recommended
-•	Libraries:
-o	numpy
-o	pandas
-o	seaborn
-o	matplotlib
-o	tensorflow
-o	keras
-o	kagglehub
-o	scikit-learn
-Install required packages with:
-pip install numpy pandas seaborn matplotlib tensorflow keras kagglehub scikit-learn
+[README (2).md](https://github.com/user-attachments/files/21944582/README.2.md)
+# Human Behaviour Recognition using Deep Learning
 
-Usage
-1.	Run the script in a local Jupyter notebook or Google Colab.
-2.	The script will automatically:
-o	Download the mobile-health dataset from Kaggle using kagglehub
-o	Load the CSV file
-o	Downsample the majority activity class (for class balance)
-o	Print and display feature ranges to help investigate outliers
-File Structure
-•	human_behaviour.py: Main code file for dataset download, preparation, and basic analysis.
-Dataset
-•	Dataset: gaurav2022/mobile-health on Kaggle
-•	The script fetches data automatically with kagglehub.
-Example Output
-•	Path to downloaded dataset files
-•	Display of the loaded DataFrame
-•	Value counts for the balanced Activity column
-•	Printed feature ranges for initial outlier detection
-Next Steps
-•	Expand with modeling and evaluation (e.g., adding deep learning code using Keras/TensorFlow)
-•	Visualize data distributions with seaborn/matplotlib
-•	Perform feature engineering and hyperparameter tuning
-License
-This script is provided for educational and research purposes. Please check dataset source license for usage restrictions.
-Author
-If this is a collaboration, add GitHub handles or names here.
- 
- 
+This project demonstrates human activity recognition using the **Mobile Health Dataset**. 
+It applies deep learning techniques (CNN + LSTM) to classify different human activities 
+such as walking, jogging, sitting, running, and more.
+
+## Dataset
+The dataset used is the **Mobile Health Dataset** available from Kaggle via `kagglehub`.
+
+- Dataset: [gaurav2022/mobile-health](https://www.kaggle.com/datasets/gaurav2022/mobile-health)
+- The dataset includes multiple human activities collected via sensors.
+
+## Features
+- Data preprocessing (resampling, outlier removal)
+- Sequence dataset creation for activity recognition
+- CNN + LSTM based deep learning model
+- Model training, validation, and evaluation
+- Performance visualization (loss & accuracy plots)
+- Confusion matrix and classification report
+
+## 🛠️ Requirements
+Install the dependencies before running the project:
+
+```bash
+pip install numpy pandas seaborn matplotlib tensorflow keras scikit-learn kagglehub
+```
+
+## Usage
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/human-behaviour.git
+   cd human-behaviour
+   ```
+
+2. Run the script:
+   ```bash
+   python human_behaviour.py
+   ```
+
+3. The script will:
+   - Download the dataset automatically using `kagglehub`
+   - Train the model
+   - Save the best model as `mhealth_best.keras`
+   - Display training/validation performance and evaluation metrics
+
+## Results
+- Achieves high accuracy in classifying multiple activities
+- Generates plots of training vs. validation accuracy/loss
+- Displays confusion matrix with activity labels
+
+## Future Work
+- Hyperparameter tuning for improved accuracy
+- Deployment as a real-time activity recognition app
+- Experimenting with different deep learning architectures
+
+## Author
+Developed as part of a deep learning experiment for human activity recognition.
 
